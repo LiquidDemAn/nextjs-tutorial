@@ -1,9 +1,14 @@
+import { Heading } from '@/components/heading';
+import Head from 'next/head';
 import React from 'react';
 
 const Posts = () => {
 	return (
 		<>
-			<h1>Posts list:</h1>
+			<Head>
+				<title>Posts</title>
+			</Head>
+			<Heading text='Posts list:' />
 		</>
 	);
 };

@@ -1,8 +1,15 @@
+import Head from 'next/head';
 import { Heading } from '@/components/heading';
-import React from 'react';
 
 const Contact = () => {
-	return <Heading text='Dmytro' />;
+	return (
+		<>
+			<Head>
+				<title>Contact</title>
+			</Head>
+			<Heading text='Dmytro' />
+		</>
+	);
 };
 
 export default Contact;

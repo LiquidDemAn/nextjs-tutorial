@@ -1,5 +1,7 @@
+import { Heading } from '@/components/heading';
+
 const Home = () => {
-	return <h1>Hello Next.JS</h1>;
+	return <Heading text='Hello Next.JS' />;
 };
 
 export default Home;

@@ -1,8 +1,8 @@
-import { User } from '@/typedef';
+import { UserType } from '@/typedef';
 import { Heading } from '../heading';
 
 type Props = {
-	contact?: User;
+	contact?: UserType;
 };
 
 export const ContactInfo = ({ contact }: Props) => {

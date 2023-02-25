@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { ContactInfo } from '@/components/contact-info';
-import { User } from '@/typedef';
+import { UserType } from '@/typedef';
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 
 type Props = {
-	contact: User;
+	contact: UserType;
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (
@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
 	const response = await fetch(
 		`https://jsonplaceholder.typicode.com/users/${id}`
 	);
-	const data: User = await response.json();
+	const data: UserType = await response.json();
 
 	if (!data) {
 		return {

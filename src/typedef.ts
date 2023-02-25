@@ -1,18 +1,16 @@
-export type User = {
+export type AddressType = {
+	street: string;
+	suite: string;
+	city: string;
+	zipcode: string;
+};
+
+export type UserType = {
 	id: number;
 	name: string;
 	username: string;
 	email: string;
-	address: {
-		street: string;
-		suite: string;
-		city: string;
-		zipcode: string;
-		geo: {
-			lat: string;
-			lng: string;
-		};
-	};
+	address: AddressType;
 };
 
 export type PostType = {

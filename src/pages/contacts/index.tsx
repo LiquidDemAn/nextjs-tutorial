@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Heading } from '@/components/heading';
-import { User } from '@/typedef';
+import { UserType } from '@/typedef';
 import { GetStaticProps } from 'next';
 
 type Props = {
-	contacts: User[];
+	contacts: UserType[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	const response = await fetch('https://jsonplaceholder.typicode.com/users');
-	const data: User[] = await response.json();
+	const data: UserType[] = await response.json();
 
 	if (!data) {
 		return {

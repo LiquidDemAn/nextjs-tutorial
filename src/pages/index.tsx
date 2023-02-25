@@ -10,18 +10,25 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-	const response = await fetch(`${process.env.API_HOST}/socials`);
-	const data: SocialType[] = await response.json();
+	try {
+		const response = await fetch(`${process.env.API_HOST}/socials`);
+		const data: SocialType[] = await response.json();
 
-	if (!data) {
+		if (!data) {
+			return {
+				notFound: true,
+			};
+		}
+
 		return {
-			notFound: true,
+			props: { socials: data },
+		};
+	} catch (error) {
+		console.log(error);
+		return {
+			props: { socials: [] },
 		};
 	}
-
-	return {
-		props: { socials: data },
-	};
 };
 
 const Home = ({ socials }: Props) => {

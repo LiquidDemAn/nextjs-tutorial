@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { Heading } from '@/components/heading';
 import { User } from '@/typedef';
 import { GetStaticProps } from 'next';
@@ -30,9 +31,9 @@ const Contacts = ({ contacts }: Props) => {
 			</Head>
 			<Heading text='Contacts list:' />
 			<ul>
-				{contacts.map(({ id, email, name }) => (
+				{contacts.map(({ id, name }) => (
 					<li key={id}>
-						<strong>{name}</strong> ({email})
+						<Link href={`/contacts/${id}`}>{name}</Link>
 					</li>
 				))}
 			</ul>

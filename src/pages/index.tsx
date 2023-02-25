@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '@/styles/home.module.scss';
+import styles from '@/styles/Home.module.scss';
 import { Heading } from '@/components/heading';
 import { GetStaticProps } from 'next';
 import { SocialType } from '@/typedef';

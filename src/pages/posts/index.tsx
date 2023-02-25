@@ -8,8 +8,6 @@ type Props = {
 	posts: PostType[];
 };
 
-
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	const response = await fetch('https://jsonplaceholder.typicode.com/posts');
 	const data: PostType[] = await response.json();

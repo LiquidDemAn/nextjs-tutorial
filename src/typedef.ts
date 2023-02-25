@@ -21,3 +21,9 @@ export type PostType = {
 	title: string;
 	body: string;
 };
+
+export type SocialType = {
+	id: number;
+	icon: string;
+	path: string;
+};

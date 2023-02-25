@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const ContactInfo = ({ contact }: Props) => {
-	const { name, email, username, address } = contact || {};
+	const { name, email, address } = contact || {};
 	const { street, suite, city, zipcode } = address || {};
 
 	if (!contact) {
